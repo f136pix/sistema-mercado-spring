@@ -1,11 +1,11 @@
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
-import {retrieveIndexBean} from "./api/indexApiService";
+import {retrieveIndexBean, retrievePathBean} from "../api/indexApiService";
 
 function IndexComponent() {
     function restApi() {
-        retrieveIndexBean()
-         .then((response) => setMessage(response.data))
+        retrievePathBean("Filipe")
+         .then((response) => setMessage(response.data.message))
          .catch((err) => console.log(err))
          .finally(() => console.log("Executado"));
   }

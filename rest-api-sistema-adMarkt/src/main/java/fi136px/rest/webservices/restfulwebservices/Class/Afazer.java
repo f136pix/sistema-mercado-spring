@@ -1,4 +1,4 @@
-package fi136px.rest.webservices.restfulwebservices.Afazeres;
+package fi136px.rest.webservices.restfulwebservices.Class;
 
 import java.time.LocalDate;
 
@@ -8,22 +8,22 @@ public class Afazer {
 		
 	}
 	
-	public Afazer(int id, String username, String description, LocalDate targetDate, boolean done) {
+	public Afazer(int id, String username, String descricao, LocalDate targetDate, boolean feito) {
 		super();
 		this.id = id;
 		this.username = username;
-		this.description = description;
+		this.descricao = descricao;
 		this.targetDate = targetDate;
-		this.done = done;
+		this.feito = feito;
 	}
 
 	private int id;
 
 	private String username;
 	
-	private String description;
+	private String descricao;
 	private LocalDate targetDate;
-	private boolean done;
+	private boolean feito;
 
 	public int getId() {
 		return id;
@@ -42,11 +42,11 @@ public class Afazer {
 	}
 
 	public String getDescription() {
-		return description;
+		return descricao;
 	}
 
 	public void setDescription(String description) {
-		this.description = description;
+		this.descricao = description;
 	}
 
 	public LocalDate getTargetDate() {
@@ -57,18 +57,18 @@ public class Afazer {
 		this.targetDate = targetDate;
 	}
 
-	public boolean isDone() {
-		return done;
+	public boolean isFeito() {
+		return feito;
 	}
 
-	public void setDone(boolean done) {
-		this.done = done;
+	public void setFeito(boolean feito) {
+		this.feito = feito;
 	}
 
 	@Override
 	public String toString() {
-		return "Afazer [id=" + id + ", username=" + username + ", description=" + description + ", targetDate="
-				+ targetDate + ", done=" + done + "]";
+		return "Afazer [id=" + id + ", username=" + username + ", description=" + descricao + ", targetDate="
+				+ targetDate + ", feito=" + feito + "]";
 	}
 
 }
