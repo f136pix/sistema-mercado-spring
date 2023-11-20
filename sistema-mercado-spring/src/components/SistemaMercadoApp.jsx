@@ -1,11 +1,12 @@
-import './mercado/tarefas/SistemaMercado.css'
+import './afazeres/SistemaMercado.css'
 import {useState} from "react";
 import {BrowserRouter, Link, Navigate, Route, Routes, useNavigate, useParams} from "react-router-dom";
-import LogoutComponent from "./mercado/LogoutComponent";
+import LogoutComponent from "./auth/LogoutComponent";
 import FooterComponent from "./partials/FooterComponent";
 import HeaderComponent from "./partials/HeaderComponent";
-import ListComponent from "./mercado/tarefas/ListaComponent";
-import IndexComponent from "./mercado/IndexComponent";
+import ListComponent from "./afazeres/ListaAfazeresComponent";
+import AfazerComponent from "./afazeres/AfazerComponent";
+import IndexComponent from "./IndexComponent";
 import ErrComponent from "./err/ErrorComponent";
 import LoginComponent from "./auth/loginComponent";
 import AuthProvider, {useAuth} from "./auth/AuthContext";
@@ -31,6 +32,7 @@ export default function SistemaMercadoApp() {
                     <Route path={'/login'} element={<LoginComponent />} />
                     <Route path={'/main/:username'} element={ <AutenticarRoute><IndexComponent /></AutenticarRoute> } />
                     <Route path={'/afazeres'} element={ <AutenticarRoute><ListComponent /></AutenticarRoute> } />
+                    <Route path={'/afazeres/:id'} element={ <AutenticarRoute><AfazerComponent /></AutenticarRoute> } />
                     <Route path={'/logout'} element={<LogoutComponent />} />
                     <Route path='*' element={<ErrComponent />} /> {/* err routing */}
                 </Routes>

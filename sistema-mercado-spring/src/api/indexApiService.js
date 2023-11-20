@@ -6,6 +6,20 @@ const apiClient = axios.create(
     }
 )
 
-export const retrieveIndexBean= () => apiClient.get("http://localhost:8080/hello-world");
+const headers = {
+    headers : {
+        Authorization: "Basic ZjEzNnBpeDo4NDMx"
+    }
+}
 
-export const retrievePathBean = (nome) => apiClient.get(`/hello-world/path-variable/${nome}`);
+export const retrieveIndexBean = () => apiClient.get("http://localhost:8080/hello-world", {
+    headers: {
+        Authorization: "Basic ZjEzNnBpeDo4NDMx"
+    }
+});
+
+export const retrievePathBean = (nome) => apiClient.get(`/hello-world/path-variable/${nome}`, {
+    headers: {
+        Authorization: "Basic ZjEzNnBpeDo4NDMx"
+    }
+});

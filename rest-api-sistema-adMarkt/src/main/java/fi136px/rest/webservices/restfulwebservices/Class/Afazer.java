@@ -8,22 +8,22 @@ public class Afazer {
 		
 	}
 	
-	public Afazer(int id, String username, String descricao, LocalDate targetDate, boolean feito) {
+	public Afazer(int id, String username, String description, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;
 		this.username = username;
-		this.descricao = descricao;
+		this.description = description;
 		this.targetDate = targetDate;
-		this.feito = feito;
+		this.done = done;
 	}
 
 	private int id;
 
 	private String username;
 	
-	private String descricao;
+	private String description;
 	private LocalDate targetDate;
-	private boolean feito;
+	private boolean done;
 
 	public int getId() {
 		return id;
@@ -42,11 +42,11 @@ public class Afazer {
 	}
 
 	public String getDescription() {
-		return descricao;
+		return description;
 	}
 
-	public void setDescription(String description) {
-		this.descricao = description;
+	public void setDescription(String descricao) {
+		this.description = descricao;
 	}
 
 	public LocalDate getTargetDate() {
@@ -57,18 +57,18 @@ public class Afazer {
 		this.targetDate = targetDate;
 	}
 
-	public boolean isFeito() {
-		return feito;
+	public boolean isDone() {
+		return done;
 	}
 
-	public void setFeito(boolean feito) {
-		this.feito = feito;
+	public void setDone(boolean done) {
+		this.done = done;
 	}
 
 	@Override
 	public String toString() {
-		return "Afazer [id=" + id + ", username=" + username + ", description=" + descricao + ", targetDate="
-				+ targetDate + ", feito=" + feito + "]";
+		return "Afazer [id=" + id + ", username=" + username + ", descricao=" + description + ", targetDate="
+				+ targetDate + ", feito=" + done + "]";
 	}
 
 }

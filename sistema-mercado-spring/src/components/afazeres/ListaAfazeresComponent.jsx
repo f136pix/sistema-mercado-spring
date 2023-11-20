@@ -37,6 +37,10 @@ function ListComponent() {
             })
     }
 
+    function addNewAfazer() {
+        navigate('/afazeres/criar-afazer')
+    }
+
     function updateAfazer(id) {
 
     }
@@ -63,7 +67,7 @@ function ListComponent() {
                     afazeres.map(afazer => {
                         return (<tr key={afazer.id}>
                             <td>{afazer.description}</td>
-                            <td>{afazer.feito.toString()}</td>
+                            <td>{afazer.done.toString()}</td>
                             <td>{afazer.targetDate.toString()}</td>
                             <td>
                                 <button className={"btn btn-warning"}
@@ -83,6 +87,9 @@ function ListComponent() {
                     })}
                 </tbody>
             </table>
+        </div>
+        <div>
+            <button className={"btn btn-success m-5"} onClick={addNewAfazer}>Adicionar Tarefa</button>
         </div>
     </div>)
 }

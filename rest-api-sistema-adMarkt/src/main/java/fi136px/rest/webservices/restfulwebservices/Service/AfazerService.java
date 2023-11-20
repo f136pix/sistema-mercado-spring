@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AfazerService {
-	
+
 	private static List<Afazer> afazeres = new ArrayList<>();
 	
 	private static int afazeresCount = 0;
@@ -29,8 +29,8 @@ public class AfazerService {
 		return afazeres.stream().filter(predicate).toList();
 	}
 	
-	public Afazer addTodo(String username, String description, LocalDate targetDate, boolean done) {
-		Afazer todo = new Afazer(++afazeresCount,username,description,targetDate,done);
+	public Afazer addAfazer(Afazer afazer) {
+		Afazer todo = new Afazer(++afazeresCount,afazer.getUsername(),afazer.getDescription(),afazer.getTargetDate(),afazer.isDone());
 		afazeres.add(todo);
 		return todo;
 	}

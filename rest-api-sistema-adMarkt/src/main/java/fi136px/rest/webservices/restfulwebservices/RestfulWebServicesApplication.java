@@ -18,7 +18,7 @@ public class RestfulWebServicesApplication {
 
         return new WebMvcConfigurer() {
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // aceeitando qualquer https method de qualquer origin
+                registry.addMapping("/**") // aceitando qualquer https method de qualquer origin
                         .allowedMethods("*")
                         .allowedOrigins("http://localhost:3000/");
             }
