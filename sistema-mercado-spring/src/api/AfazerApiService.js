@@ -8,17 +8,17 @@ const apiClient = axios.create({
     baseURL: 'http://localhost:8080',
 })
 
-// get all by username
+// get all por username
 export const retrieveAfazeresByUsernameApi = (username) => {
     return apiClient.get(`users/${username}/afazeres`);
 }
 
-// get singleton by id
+// get singleton por id
 export const retrieveAfazeresById = (username, id) => {
     return apiClient.get(`users/${username}/afazeres/${id}`)
 }
 
-// delete singleton by id
+// delete singleton por id
 export const deleteAfazerByIdApi = (username, id) => {
     return apiClient.delete(`users/${username}/afazeres/${id}`);
 }
